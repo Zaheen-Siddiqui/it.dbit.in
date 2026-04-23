@@ -144,11 +144,32 @@
     .vision-mission-section .card-text {
       color: #fff;
       font-size: 1.05rem;
+      line-height: 1.6;
       text-align: left;
       margin-bottom: 1.2rem;
       margin-top: 0;
       padding-left: 0.5em;
     }
+    .vision-mission-section .card-text:last-of-type {
+      margin-bottom: 0;
+    }
+    .split-stack-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      height: 100%;
+    }
+    .split-stack-card .split-part {
+      flex: 1;
+      min-height: 0;
+    }
+    .split-stack-card .split-part:first-child {
+      flex: 1.45;
+      justify-content: flex-start !important;
+    }
+    /* .split-stack-card .split-part:last-child {
+      flex: 0.55;
+    } */
     .highlights-card::after {
       content: '';
       position: absolute;
@@ -374,11 +395,11 @@ window.addEventListener('resize', matchCardHeights);
             <h3 class="py-3 text-center">News and Events</h3>
             <div class="scroll-container mb-5">
               <div class="scroll-viewport">
-                <div class="scroll-text text-center">
-                  <a href="/assets/PTM_Notice.jpg" target="" class="nav-link">PTM Notice</a>
-                  <a href="/assets/Open House-20sept-2025-notice.pdf" target="" class="nav-link">Open House/MSE Result Declaration 20th Sept 2025</a>
-                  <a href="" target="" class="nav-link">Department  Day 2025   </a>
-                  <a href="/assets/CSI_planner2025.jpg" target="" class="nav-link">CSI Planner  2025  </a>
+                <div class="scroll-text text-start">
+                  18-22 May 2026 SE Oral Examination<br>
+                  18-22 May 2026 TE & BE IA2 Examination<br>
+                  1-12 June 2026 ESE Examination<br>
+                  22 June Open House<br>
                 </div>
               </div>
             </div>
@@ -388,8 +409,10 @@ window.addEventListener('resize', matchCardHeights);
             <div class="scroll-container mb-5">
               <div class="scroll-viewport">
                 <div class="scroll-text text-center">
-                  <a href="/assets/slideshow/innovex.png" target="" class="nav-link">Innovex 2025</a>
-                  <a href="/assets/slideshow/innovex.png" target="" class="nav-link">Innoquest 2025</a>
+                  Department Day on the 28 of April
+                  Innovex on 7 May 2026
+                  <!-- <a href="/assets/slideshow/innovex.png" target="" class="nav-link">Innovex 2025</a>
+                  <a href="/assets/slideshow/innovex.png" target="" class="nav-link">Innoquest 2025</a> -->
                 </div>
               </div>
             </div>
@@ -401,20 +424,21 @@ window.addEventListener('resize', matchCardHeights);
               1. To become a preferred choice for the students and recruiters.<br><br>
               2. To be known for contributions towards Open Source Technology in the education domain.
             </p>
-            <br><br><br>
             <h4 class="mb-2"><i class="bi bi-bullseye"></i> Mission</h4>
             <p class="card-text">
               1. To provide a conducive environment for teaching-learning and research opportunities for the holistic growth of each individual.<br><br>
               2. To develop expertise in training and application development in the education domain using Open Source Technology.
             </p>
           </div>
-          <div id="flagship-extra-card" class="row mx-3 justify-content-center flex-grow-1 mt-3">
-            <div class="modern-box-green w-100 d-flex flex-column justify-content-center align-items-center p-4">
+          <div id="flagship-extra-card" class="row mx-3 justify-content-center flex-grow-1 mt-3 split-stack-card">
+            <div class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center p-4">
               <h4 class="text-center mb-3"><i class="bi bi-info-circle-fill"></i> About College</h4>
               <p><strong>Don Bosco Institute of Technology (DBIT)</strong>, established in 2001, is located in Kurla (W), Mumbai. The institute is affiliated to the <strong>University of Mumbai</strong> and approved by <strong>AICTE</strong>.</p>
               <p>DBIT aims to provide quality technical education with a focus on values, innovation, and holistic development. The campus offers modern infrastructure, skilled faculty, active student clubs, and excellent placement opportunities.</p>
               <p>With a strong emphasis on research, entrepreneurship, and community engagement, DBIT has emerged as a preferred choice for engineering aspirants in Mumbai.</p>
               <!-- <p class="text-center fw-bold"><i>DBIT – Shaping engineers, building futures.</i></p> -->
+            </div>
+            <div class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center p-4">
             </div>
           </div>
         </div>
@@ -468,6 +492,7 @@ window.addEventListener('resize', matchCardHeights);
     }
   }
   window.addEventListener('DOMContentLoaded', matchSidebarCardHeights);
+  window.addEventListener('load', matchSidebarCardHeights);
   window.addEventListener('resize', matchSidebarCardHeights);
   </script>
 
@@ -484,6 +509,7 @@ window.addEventListener('resize', matchCardHeights);
     }
   }
   window.addEventListener('DOMContentLoaded', matchHighlightsHeights);
+  window.addEventListener('load', matchHighlightsHeights);
   window.addEventListener('resize', matchHighlightsHeights);
   </script>
 
